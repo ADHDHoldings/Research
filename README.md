@@ -2,4 +2,4 @@
 
 ## Projects
 
-- [`crime-coin/`](crime-coin/) — research into a friend’s crypto “golden crime” trading conjecture (OI / funding / listing playbook). Stage 1 read done; Stage 2 piece-by-piece review next.
+- [`crime-coin/`](crime-coin/) — study a friend’s trading playbook component by component, looking for fundamentals behind each process before changing any signal.

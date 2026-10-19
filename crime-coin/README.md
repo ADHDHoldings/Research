@@ -1,43 +1,44 @@
 # Crime Coin Research
 
-Exploratory project to understand, track, and eventually quantify/codify a friend's
-trading conjecture around coordinated crypto “crime” setups (esp. “golden crime”).
+Study a friend’s trading playbook and ask, component by component, whether any
+process behind it rests on a fundamental we can state and later measure.
 
 **Source doc:** [`references/Crime_Coin.pdf`](references/Crime_Coin.pdf)
 
 ## Working agreement
 
-- Stage work, piece by piece.
+- Learn one component before judging its signals.
+- After it is understood, the only allowed next moves are: **add on**, **replace**, or **augment** — or park it.
 - **Ask before** any heavy build, long-running job, data pull, or paid API work.
-- Prefer small experiments over systems until a component is agreed.
 
 ## Stages
 
 | Stage | Goal | Status |
 |-------|------|--------|
-| 1 | Read & understand the conjecture | **done** (see docs) |
-| 2 | Walk the doc piece by piece; test ideas per component | **next** |
-| 3 | (later) Codify / track / quantify agreed components | blocked on Stage 2 |
+| 1 | Read the playbook | **done** |
+| 2 | Understand each component (Phase A), then decide add / replace / augment (Phase B) | **current** |
+| 3 | Quantify or track only the components we have a reason to change | later |
 
 ## Folder layout
 
 ```
 crime-coin/
-  README.md                 # this file
-  docs/                     # durable summaries & component specs
-  notes/                    # scratch, meeting notes, idea logs
-  references/               # source PDF and external refs
-  experiments/              # small, named trials (empty until approved)
+  README.md
+  docs/                     # method, summary, component map, tracker
+  notes/
+  references/               # source PDF
+  experiments/              # empty until a Phase B test is approved
 ```
 
 ## Quick links
 
-- [Conjecture summary](docs/01-conjecture-summary.md) — Stage 1 read of the PDF
-- [Component map](docs/02-component-map.md) — pieces we’ll review together
-- [Project tracker](docs/03-project-tracker.md) — status, decisions, open questions
+- [Research method](docs/00-research-method.md)
+- [Playbook summary](docs/01-conjecture-summary.md)
+- [Component map](docs/02-component-map.md)
+- [Project tracker](docs/03-project-tracker.md)
 
 ## Naming note
 
-“Crime” here is the author’s informal label for a suspected coordinated market-
-manipulation / short-squeeze playbook — not a legal claim. Treat all of this as
-research into patterns and signals, not investment advice.
+“Crime” is the author’s informal label for a suspected coordinated
+short-squeeze playbook. This folder is research into that playbook, not
+investment advice or a claim that any operator or venue did anything illegal.

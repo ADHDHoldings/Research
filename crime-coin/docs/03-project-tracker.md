@@ -1,29 +1,30 @@
 # Project tracker
 
-Lightweight stand-in for a Wayfinder skill (not available in this environment).
-Update this as we decide things.
-
 ## Current focus
 
-**Stage 2 — piece-by-piece review.** Waiting on your first component / thoughts.
+**Phase A — understand components.** No signal add / replace / augment until
+the component writeup exists. Method: [`00-research-method.md`](00-research-method.md).
+
+Waiting on which component to understand first.
 
 ## Decisions log
 
 | Date | Decision |
 |------|----------|
-| 2026-10-19 | Created `crime-coin/` project folder; Stage 1 read complete |
-| 2026-10-19 | Rule: ask before heavy / long / rising-cost work |
+| 2026-10-19 | Created `crime-coin/`; Stage 1 read of the PDF complete |
+| 2026-10-19 | Ask before heavy / long / rising-cost work |
+| 2026-10-19 | Goal is fundamentals behind the playbook, not codifying it as-is |
+| 2026-10-19 | Per component: understand first; only then add on, replace, or augment |
 
-## Open questions (for you)
+## Open questions
 
-1. Which component do you want to start with — universe filter (C1/C2) or the OI/funding trade read (C3/C5/C6)?
-2. Any preferred data sources you already trust (Aster, Coinglass, exchange APIs, Dune, etc.)?
-3. Scope for v0: golden crime only, or include Type B/C from day one?
-4. Are we aiming first at **manual dashboards / alerts**, or eventually **signals that could feed a bot**? (No build until you say.)
+1. Which component should we understand first?
+2. For that component, what have you already noticed that the PDF does not say?
+
+Data sources, dashboards, and automation stay out of scope until a component
+has a Phase B decision.
 
 ## Idea inbox
-
-_Paste thoughts here as we go; link to `notes/` files for longer writeups._
 
 -
 
@@ -35,6 +36,6 @@ _Paste thoughts here as we go; link to `notes/` files for longer writeups._
 
 ## Risks / constraints
 
-- Claims about operators, CEX involvement, and manipulation are **unproven conjecture**.
-- Onchain indexing + AI previously got expensive and stalled.
+- Operator and venue claims in the PDF are his conjecture.
+- Prior full-chain indexing got expensive and did not help execution.
 - Ask before any paid API, full-chain ingest, or long training runs.
