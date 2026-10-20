@@ -37,6 +37,7 @@ crime-coin/
 - [Component map](docs/02-component-map.md)
 - [Project tracker](docs/03-project-tracker.md)
 - [C1a — Ghost / botted socials](docs/components/C1a-ghost-socials.md) _(in progress)_
+- [C0 — Same-operator / onchain clustering](docs/components/C0-same-operator-onchain.md) _(scoping)_
 
 ## Naming note
 

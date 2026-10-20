@@ -10,6 +10,7 @@ Method: [`00-research-method.md`](00-research-method.md)
 
 | ID | Component | What he is doing | Status | Phase B |
 |----|-----------|------------------|--------|---------|
+| C0 | Same-operator story | Believes one group runs the golden playbook; heuristics are how he notices | understanding | — |
 | C1 | Candidate profile | Price ~$0.3–0.4, ~$300M FDV, ghost socials, recurring VCs | understanding | — |
 | C1a | Ghost / botted socials | Judge Twitter/Spaces as empty or inauthentic vs VC presence | understanding | — |
 | C2 | Universe watch | New CEX listings + CMC top ~500 that fit the profile | todo | — |
@@ -33,5 +34,7 @@ Understand golden-crime steps before the other playbooks:
 3. **C4, C8** — the harder “why this is manipulated” claims
 4. **C7, C9, C10** — supporting and failure cases
 5. **C11, C12** — separate playbooks
+
+**C0** (same-operator / onchain clustering) is a parallel track: it tests the story behind the heuristics, not a day-to-day entry signal. See [`components/C0-same-operator-onchain.md`](components/C0-same-operator-onchain.md).
 
 Change the order whenever you want. Phase B stays blank until that row is understood.
