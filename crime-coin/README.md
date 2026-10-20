@@ -36,6 +36,7 @@ crime-coin/
 - [Playbook summary](docs/01-conjecture-summary.md)
 - [Component map](docs/02-component-map.md)
 - [Project tracker](docs/03-project-tracker.md)
+- [C1a — Ghost / botted socials](docs/components/C1a-ghost-socials.md) _(in progress)_
 
 ## Naming note
 

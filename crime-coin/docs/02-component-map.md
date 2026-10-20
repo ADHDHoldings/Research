@@ -10,7 +10,8 @@ Method: [`00-research-method.md`](00-research-method.md)
 
 | ID | Component | What he is doing | Status | Phase B |
 |----|-----------|------------------|--------|---------|
-| C1 | Candidate profile | Price ~$0.3–0.4, ~$300M FDV, ghost socials, recurring VCs | todo | — |
+| C1 | Candidate profile | Price ~$0.3–0.4, ~$300M FDV, ghost socials, recurring VCs | understanding | — |
+| C1a | Ghost / botted socials | Judge Twitter/Spaces as empty or inauthentic vs VC presence | understanding | — |
 | C2 | Universe watch | New CEX listings + CMC top ~500 that fit the profile | todo | — |
 | C3 | Open interest | Cross-CEX OI; Aster / Bitget spikes as an early tell | todo | — |
 | C4 | Interest mismatch | OI and volume vs how little real social interest there is | todo | — |

@@ -2,10 +2,10 @@
 
 ## Current focus
 
-**Phase A — understand components.** No signal add / replace / augment until
-the component writeup exists. Method: [`00-research-method.md`](00-research-method.md).
+**Phase A — C1a (ghost / botted socials / “random” content).**  
+Writeup: [`components/C1a-ghost-socials.md`](components/C1a-ghost-socials.md).
 
-Waiting on which component to understand first.
+Working the user’s questions on the social excerpt. No Phase B yet.
 
 ## Decisions log
 
@@ -15,14 +15,14 @@ Waiting on which component to understand first.
 | 2026-10-19 | Ask before heavy / long / rising-cost work |
 | 2026-10-19 | Goal is fundamentals behind the playbook, not codifying it as-is |
 | 2026-10-19 | Per component: understand first; only then add on, replace, or augment |
+| 2026-10-20 | Started piece-by-piece on C1a social/ghost claim from the PDF excerpt |
 
-## Open questions
+## Open questions (C1a)
 
-1. Which component should we understand first?
-2. For that component, what have you already noticed that the PDF does not say?
-
-Data sources, dashboards, and automation stay out of scope until a component
-has a Phase B decision.
+1. Does he have any concrete checklist for “botted / ghost,” or is it gestalt only?
+2. Does “random” mean hired KOL / Space hosts, fake-feeling team voices, or both?
+3. Quiet-but-real socials vs loud-but-empty — which fails his screen?
+4. Do the golden-list names all fail the social test the same way?
 
 ## Idea inbox
 
