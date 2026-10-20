@@ -138,16 +138,69 @@ None of that shows who holds the OI bundle or who is liquidating whom inside Bin
 
 Park or heavily demote Target A/C as *proof of manipulator identity*. Keep any onchain work, if at all, as a small optional check on deposit-edge overlap — not as the way to beat what Bubble Maps missed inside the CEX.
 
+## 6c. Idea — CEX-as-mixer and funding-origin ratio of winners
+
+**User idea (2026-10-20):** Workflow = CEX → many wallets → profit onchain → back to CEX (exchange as mixer). Could we compute, among wallets that **profited** on the coin, the ratio of funding origin **CEX vs existing wallets** — and would that help?
+
+### What the metric would be
+
+Roughly:
+
+1. Define a set of wallets that **realized profit** on the token onchain (sold/sent more value out than they put in, under some rules).
+2. For each, walk **funding origin**: first meaningful inbound capital — labeled CEX withdrawal/hot wallet vs another EOA / bridge / DeFi / “already existed in the wild.”
+3. Aggregate: share of winner capital (or winner wallets) that is **CEX-sourced** vs **non-CEX-sourced**.
+
+Optional refinements (still conceptual): wallet age, fan-out from the same withdrawal batch, time from withdraw → trade → deposit-back, peel-chain shape.
+
+### What it would actually test
+
+| It can support | It cannot do |
+|----------------|--------------|
+| “Onchain winners look **industrially CEX-cycled** (fresh, exchange-funded) vs organic holders who were already funded elsewhere” | Name the operator inside the CEX mixer |
+| Compare that ratio on golden coins vs a control set | Link coin A’s deposit-back to coin B’s next withdrawal (ledger is opaque) |
+| Fit a **wash / inventory / onchain-leg** story | Prove the **perp OI** desk is the same entity |
+
+So this is a **deposit-edge / participant-structure** metric — Target A/B-adjacent — not a custody pierce.
+
+### Would it help?
+
+**Somewhat, with a narrow claim — not as proof of the full playbook.**
+
+- **Helps if** the money-making (or wash) leg you care about is **onchain**, and you want evidence that winners are mostly “exchange-spawned” participants rather than a real community of pre-existing wallets. That aligns with ghost-social + industrial flow.
+- **Weak for golden crime’s main P&amp;L** if profits sit on **CEX perps** the whole time. Those winners **never appear** in “wallets who profited onchain.” You would be measuring a side cast (DEX traders, wash loops, exit liquidity), not the OI bundle.
+- **CEX→wallet is also normal retail.** High CEX-funding among traders is common. The metric needs a **control set** and probably shape features (freshness, batch fan-out, fast round-trip) — ratio alone is not a smoking gun.
+- **Mixer works:** once they deposit back, the next coin’s fresh wallets look unrelated onchain. The ratio can say “this coin’s winners look CEX-cycled”; it still won’t stitch cycles across coins into one identity.
+- **Definition risk:** “profited” is ambiguous (unrealized, MEV/arb, partial exits, transfer ≠ trade). Bad definitions make the ratio meaningless.
+
+### Fit to custody ceiling
+
+This idea lives exactly on the **edge** we said was still visible: withdraw → activity → deposit. It does **not** contradict the ceiling; it accepts it and asks a weaker question: *what kind of onchain winners does this coin produce?*
+
+Falsifiable fundamental (if we ever tested it):
+
+> On golden-crime names, onchain realized-profit wallets are more often freshly CEX-funded (and/or fast round-trip) than on a control set of similar-FDV tokens — consistent with industrial CEX-cycled flow, not organic holder distribution.
+
+### Phase A verdict on the idea
+
+| Question | Answer |
+|----------|--------|
+| Is the workflow plausible? | Yes — standard CEX-as-hub behavior |
+| Is the ratio computable in principle? | Yes, with labels + a profit definition + cost |
+| Does it beat Bubble Maps on operator ID? | **No** — still can’t see through the mixer |
+| Does it help at all? | **Yes, narrowly** — as a *structure of onchain winners* / industrial-flow check, especially vs controls; better as add-on evidence than as the main validation of same-operator OI control |
+| Build now? | **No** — idea captured only |
+
 ## 7. Minimal research design (proposal only — not started)
 
 Given §6b, a custom indexer to “see past Bubble Maps into custody” is **not** a proposed design.
 
-The only onchain probe still worth considering later (and only with explicit go-ahead):
+Onchain probes still worth considering later (only with explicit go-ahead), in increasing cost:
 
-1. **Fixed universe:** a few golden names (+ optional fail-deads / controls).  
-2. **Question limited to deposit-edge:** do the same pre-CEX clusters or deposit routes recur across coins more than controls?  
-3. **Method:** existing UIs first; no full-chain ingest.  
-4. **Stop rule:** if the picture is just “big CEX bubbles,” stop — that is the custody ceiling, not a data gap we can fill.
+1. **Existing UIs** on a few golden names — is the picture just big CEX bubbles?  
+2. **Deposit-edge overlap** across coins vs controls.  
+3. **Funding-origin ratio of onchain winners** (CEX-sourced vs existing wallets) vs controls — §6c; needs a profit definition; still does not pierce the mixer.  
+
+Stop if (1) already shows only custody walls and no distinctive edge structure.
 
 **No indexer, scraper, or paid API run is approved yet.**
 
@@ -159,10 +212,11 @@ The only onchain probe still worth considering later (and only with explicit go-
 | What onchain is for | Test the group story; he already found it weak for execution |
 | Custody ceiling | **If inventory/OI is inside CEX, Bubble Maps–class tools cannot see the operator** |
 | What clustering can support | At best deposit-edge / pre-custody overlap; not OI control |
+| CEX-funding ratio of winners | Narrow help for “industrial onchain winners”; does not ID operator through mixer |
 | Build | **Not started — needs explicit go-ahead** |
 
 ### Open questions for you
 
-1. Given the custody ceiling: **park onchain clustering** as a primary path, or keep only a tiny deposit-edge smoke look?
-2. Prefer to shift the “back the entity-group story” effort toward **venue data** (OI / funding / basis — closer to what he trades) instead?
-3. Or continue piece-by-piece on the playbook (C1a socials, then C3/C5) and leave C0 parked?
+1. Keep §6c as a **parked metric idea** only, or treat it as the preferred tiny onchain probe if we ever do one?
+2. For golden crime specifically: do you believe a meaningful P&amp;L leg is **onchain**, or mostly **CEX perps**? (If mostly perps, this ratio measures the wrong winners.)
+3. Park C0 and continue piece-by-piece on the playbook (C1a → C3/C5), with venue data as the later path for the entity-group footprint?

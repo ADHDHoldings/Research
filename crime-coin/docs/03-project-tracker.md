@@ -24,16 +24,18 @@ No custom indexer or paid onchain pipeline until you approve a scoped probe.
 | 2026-10-20 | Started C1a on the social excerpt |
 | 2026-10-20 | Opened C0: can wallet clustering back the same-operator / entity-group story? |
 | 2026-10-20 | C0 custody ceiling: improving on Bubble Maps is not realistic for in-CEX inventory/OI |
+| 2026-10-20 | Captured idea: CEX-funding vs existing-wallet ratio among onchain winners (mixer-edge metric) |
 
 ## Open questions (C0)
 
-1. Park onchain clustering as primary path, or tiny deposit-edge smoke look only?
-2. Shift “entity-group” validation toward venue data (OI / funding / basis) instead?
-3. Or park C0 and continue piece-by-piece on the playbook (C1a → C3/C5)?
+1. Park §6c funding-origin ratio as idea-only, or preferred tiny probe later?
+2. Is golden-crime P&amp;L mostly onchain or CEX perps? (Decides whether “onchain winners” matter.)
+3. Park C0 and continue playbook piece-by-piece (C1a → C3/C5)?
 
 ## Idea inbox
 
 - Onchain wallet tracking / clustering as a way to test the entity-group claim behind his visual heuristics (OI, VC names, price action).
+- CEX → many wallets → profit → CEX as mixer; measure CEX vs non-CEX funding origin among wallets that profited onchain.
 
 ## Experiments
 
